@@ -1,2 +1,2 @@
-./gcloud/node_modules
-./gcloud/.env
+gcloud/node_modules
+gcloud/.env
