@@ -65,60 +65,15 @@
     <audio data-key="75" src="assets/sounds/tom.wav"></audio>
     <audio data-key="76" src="assets/sounds/tink.wav"></audio>
 
+    <div class="embed-wrapper">
+        <iframe src="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
 
+    <script type="text/javascript" src="scripts/drum-core.js"></script>
+    <!-- dependecies -->
+    <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
 
-    <script>
-        function playSound(e){
-            // console.log(`playSound called on this: ${this}`);
-
-            // add cases for div border clicked and div area clicked
-            keyCode = e.keyCode || e.target.dataset.key || e.target.parentElement.dataset.key
-
-            const audio = document.querySelector(`audio[data-key="${keyCode}"]`)
-            const key = document.querySelector(`.key[data-key="${keyCode}"]`)
-            if(!audio) return;  // if null return
-            audio.currentTime= 0; // rewind to start
-            audio.play();
-
-            key.classList.add('playing');
-        }
-
-        function removeTransition(e) {
-            if(e.propertyName !== "transform") return;
-            // console.log(e.propertyName)
-            this.classList.remove('playing')
-        }
-
-        function greetGoogle(){ // currently response.body is a stream. IDK how to read it yet
-        // TODO
-        // Ideally can interface with hello world gcp Function
-        // inputs: none
-        // outputs: "Hello World"
-            fetch('https://us-central1-jdillaspotifyintegration.cloudfunctions.net/helloGoogleNode')
-                .then(function(response) {
-                    // console.log(response.body)
-                    const reader = response.body.getReader().read()
-                    return reader; // Was worth a shot LOL (trying to return only first character from stream)
-                })
-        }
-
-        function gcpSpotifyQuickStart() {
-
-        }
-
-        // listener events
-        window.addEventListener('keydown', playSound);
-        let googleMessage;
-        googleMessage = greetGoogle();
-
-        const keys = document.querySelectorAll(".key");
-        // each key div should have a transition end listener
-        keys.forEach(key => key.addEventListener('transitionend',removeTransition));       
-        // add event listener to each individual key
-        keys.forEach(key => key.addEventListener('click',playSound));
-
-
-    </script>
+    <!-- <script type="text/javascript" src="scripts/spotify-web-player.js"></script> -->
 
 </body>
 
