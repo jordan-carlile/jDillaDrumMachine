@@ -10,7 +10,10 @@ body,html {
     padding: 0;
     font-family: sans-serif
 }
-
+h2 {
+  color: white;
+  text-shadow: 0 0 .5rem black;
+}
 .keys {
     display: flex;
     flex: 1;
@@ -52,4 +55,5 @@ body,html {
   }
 .embed-wrapper {
   text-align: center;
+  display: block;
 }
