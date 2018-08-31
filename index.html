@@ -50,6 +50,22 @@
         </div>
     </div>
 
+
+
+    <div class="embed-wrapper">
+        <div class="select-wrapper">
+            <h2>Select an Album to Play Along With!</h2>
+            <select name="album" id="album-select">
+                <option value="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp">J Dilla - F**k The Police</option>
+                <option value="https://open.spotify.com/embed/album/1KMfjy6MmPorahRjxhTnxm">GHOST - Prequell</option>
+            </select>
+        </div>
+        <div class="player-wrapper">
+            <iframe id="music-embed" src="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </div>
+
+
     <audio data-key="65" src="assets/sounds/clap.wav"></audio>
     <audio data-key="83" src="assets/sounds/hihat.wav"></audio>
     <audio data-key="68" src="assets/sounds/kick.wav"></audio>
@@ -59,17 +75,6 @@
     <audio data-key="74" src="assets/sounds/snare.wav"></audio>
     <audio data-key="75" src="assets/sounds/tom.wav"></audio>
     <audio data-key="76" src="assets/sounds/tink.wav"></audio>
-
-    <div class="embed-wrapper">
-        <div class="select-wrapper">
-            <h2>Select an Album to Play Along With!</h2>
-            <select name="album" id="album-select">
-                <option value="https://open.spotify.com/embed/album/1KMfjy6MmPorahRjxhTnxm">GHOST - Prequell</option>
-                <option value="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp">J Dilla - F**k The Police</option>
-            </select>
-        </div>
-        <iframe id="music-embed" src="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
 
     <script type="text/javascript" src="scripts/drum-core.js"></script>
     <script type="text/javascript" src="scripts/additions.js"></script>

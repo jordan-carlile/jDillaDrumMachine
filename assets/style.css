@@ -17,7 +17,7 @@ h2 {
 .keys {
     display: flex;
     flex: 1;
-    min-height: 100vh;
+    min-height: 50vh;
     align-items: center;
     justify-content: center;
   }
@@ -54,6 +54,22 @@ h2 {
     color: #ffc600;
   }
 .embed-wrapper {
-  text-align: center;
-  display: block;
 }
+ .select-wrapper {
+   justify-content: center;
+   text-align: center;
+   /* background: blue; */
+   width: 50%;
+   float: left;
+   min-height: 50vh;
+
+ }
+ .player-wrapper {
+   /* justify-content: center; */
+   text-align: center;
+   /* background: red; */
+   width: 50%;
+   float: left;
+   min-height: 50vh;
+
+ }
