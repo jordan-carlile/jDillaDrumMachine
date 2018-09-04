@@ -17,9 +17,9 @@ function changeEventHandler(event) {
 function refreshLogin() {
     fetch('https://us-central1-jdillaspotifyintegration.cloudfunctions.net/helloGoogleNode')
     .then(function(response) {
-      console.log(response)
+      return response.headers();
     })
-    // .then(function(myJson) {
-    //   console.log(JSON.stringify(myJson));
-    // });
+    .then(function(myJson) {
+      console.log("hello world");
+    });
 }
