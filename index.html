@@ -54,11 +54,18 @@
 
     <div class="embed-wrapper">
         <div class="select-wrapper">
-            <h2>Select an Album to Play Along With!</h2>
+            <h2>Select an Album to Play Along With Pre-selected Albums!</h2>
             <select name="album" id="album-select">
                 <option value="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp">J Dilla - F**k The Police</option>
                 <option value="https://open.spotify.com/embed/album/1KMfjy6MmPorahRjxhTnxm">GHOST - Prequell</option>
             </select>
+            <h2>Search for any Album! (requires login with spotify)</h2>
+            <!-- p.s. temporarily using my account for development lol -->
+            <form id="search-form">
+                    <input type="text" id="query" value="" class="form-control" placeholder="Type an Artist Name"/>
+                    <input type="submit" id="search" class="btn btn-primary" value="Search" />
+            </form>
+            <button id="refresh-login" >Refresh Login</button>
         </div>
         <div class="player-wrapper">
             <iframe id="music-embed" src="https://open.spotify.com/embed/album/1RsRGjP4tFXVLJsQYKltCp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

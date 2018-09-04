@@ -1,6 +1,7 @@
 // provides functionality for selector
 document.addEventListener('DOMContentLoaded',function() {
     document.querySelector('select[name="album"]').onchange=changeEventHandler;
+    document.getElementById('refresh-login').onclick=refreshLogin
 },false);
 
 function changeEventHandler(event) {
@@ -11,4 +12,14 @@ function changeEventHandler(event) {
         // change "src" of iframe
         document.getElementById('music-embed').src = event.target.value;
     } 
+}
+
+function refreshLogin() {
+    fetch('https://us-central1-jdillaspotifyintegration.cloudfunctions.net/helloGoogleNode')
+    .then(function(response) {
+      console.log(response)
+    })
+    // .then(function(myJson) {
+    //   console.log(JSON.stringify(myJson));
+    // });
 }
