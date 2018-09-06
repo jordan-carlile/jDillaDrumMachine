@@ -1,4 +1,6 @@
 // provides functionality for selector
+// let testResponse; //debug
+
 document.addEventListener('DOMContentLoaded',function() {
     document.querySelector('select[name="album"]').onchange=changeEventHandler;
     document.getElementById('refresh-login').onclick=refreshLogin
@@ -17,9 +19,9 @@ function changeEventHandler(event) {
 function refreshLogin() {
     fetch('https://us-central1-jdillaspotifyintegration.cloudfunctions.net/helloGoogleNode')
     .then(function(response) {
-      return response.headers();
+      return response.json();
     })
     .then(function(myJson) {
-      console.log("hello world");
+      console.table(myJson);
     });
 }

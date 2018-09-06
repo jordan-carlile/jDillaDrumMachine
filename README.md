@@ -19,3 +19,10 @@ Feature Wishlist:
 This Project is now [**live**](https://jordan-carlile.github.io/jDillaDrumMachine/) via github pages at:
 https://jordan-carlile.github.io/jDillaDrumMachine/
 
+Dev notes: 
+* to deploy to a Google Cloud Platform (GCP) cloud function you need to install the GCP SDK locally to your machine and then locally run the command via terminal:
+```
+gcloud deploy [FUNCTION-NAME] 
+```
+
+
